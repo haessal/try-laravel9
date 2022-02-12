@@ -11,6 +11,7 @@
     },
     "extensions": [
         "arjun.swagger-viewer",
+        "bmewburn.vscode-intelephense-client",
         "eamodio.gitlens",
         "felixfbecker.php-intellisense",
         "humao.rest-client",
