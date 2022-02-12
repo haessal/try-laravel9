@@ -8,6 +8,14 @@
     "workspaceFolder": "/workspace",
     "settings": {
         "terminal.integrated.shell.linux": "/bin/bash",
+        "cSpell.customDictionaries": {
+            "project-words": {
+                "name": "project-words",
+                "path": "${workspaceRoot}/.cSpell.words.txt",
+                "description": "Words used in this project",
+                "addWords": true
+            }
+        }
     },
     "extensions": [
         "arjun.swagger-viewer",
