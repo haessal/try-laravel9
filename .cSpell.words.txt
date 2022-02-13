@@ -1,9 +1,21 @@
-# A part of name of developers and packages
+# Common words of Laravel Framework
+Authenticatable
+encrypter
+
+# A part of name of developers, company, services, packages and tools
 arjun
+beanstalkd
 bmewburn
+Cubet
+Curotec
 eamodio
+Envoyer
 felixfbecker
 humao
 intelephense
 mysqld
+necolas
+nunomaduro
+Otwell
 ryanluker
+Vehikl
