@@ -6,6 +6,7 @@ encrypter
 arjun
 beanstalkd
 bmewburn
+circleci
 Cubet
 Curotec
 eamodio
