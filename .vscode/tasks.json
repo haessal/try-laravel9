@@ -9,6 +9,17 @@
             "command": "cspell lint '**'"
         },
         {
+            "label": "unit test",
+            "type": "shell",
+            "command": "./vendor/bin/phpunit --testdox",
+            "options": {
+                "cwd": "${workspaceFolder}/book-keeping",
+                "env": {
+                    "XDEBUG_MODE": "off"
+                }
+            }
+        },
+        {
             "label": "unit test and coverage",
             "type": "shell",
             "command": "./vendor/bin/phpunit --coverage-clover ./cov.xml",
