@@ -14,7 +14,7 @@ jobs:
       - DB_DATABASE=testing_circleci
       - DB_USERNAME=root
       - DB_PASSWORD=
-    working_directory: ~/try-laravel9
+    working_directory: ~/laraBookKeeping
     steps:
       - checkout
       - run:
@@ -45,22 +45,22 @@ jobs:
             - v1-dependencies-
       - run:
           command: composer install -n --prefer-dist
-          working_directory: ~/try-laravel9/book-keeping
+          working_directory: ~/laraBookKeeping/book-keeping
       - save_cache:
           key: v1-dependencies-{{ checksum "book-keeping/composer.json" }}
           paths:
             - ./book-keeping/vendor
       - run:
           command: cp .env.example .env && php artisan key:generate
-          working_directory: ~/try-laravel9/book-keeping
+          working_directory: ~/laraBookKeeping/book-keeping
       - run: mkdir -p build/logs
       - run: dockerize -wait tcp://localhost:3306 -timeout 1m
       - run: mysql -h 127.0.0.1 -u root -e "create database testing_circleci;"
       - run:
           command: cspell "**/*.php"
-          working_directory: ~/try-laravel9
+          working_directory: ~/laraBookKeeping
       # run tests with phpunit
       - run:
           command: XDEBUG_MODE=coverage vendor/bin/phpunit -d memory_limit=512M --coverage-clover ../build/logs/clover.xml
-          working_directory: ~/try-laravel9/book-keeping
+          working_directory: ~/laraBookKeeping/book-keeping
       - run: php book-keeping/vendor/bin/php-coveralls -vvv
