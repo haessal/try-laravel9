@@ -12,7 +12,7 @@ services:
       - DB_DATABASE=devcontainer_testing
       - APP_ENV=testing
     volumes:
-      - ..:/workspace:cached
+      - .:/workspace:cached
       - ./workspace/php.ini:/usr/local/etc/php/php.ini:ro
   web:
     build:
@@ -24,7 +24,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ..:/var/devcontainer
+      - .:/var/devcontainer
       - ./web/php.ini:/usr/local/etc/php/php.ini:ro
     depends_on:
       - db
