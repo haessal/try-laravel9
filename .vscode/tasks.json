@@ -15,7 +15,8 @@
             "options": {
                 "cwd": "${workspaceFolder}/book-keeping",
                 "env": {
-                    "XDEBUG_MODE": "off"
+                    "XDEBUG_MODE": "off",
+                    "DB_DATABASE": "devcontainer_testing"
                 }
             }
         },
@@ -26,7 +27,8 @@
             "options": {
                 "cwd": "${workspaceFolder}/book-keeping",
                 "env": {
-                    "XDEBUG_MODE": "coverage"
+                    "XDEBUG_MODE": "coverage",
+                    "DB_DATABASE": "devcontainer_testing"
                 }
             }
         }
